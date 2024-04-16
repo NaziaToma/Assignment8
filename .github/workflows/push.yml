@@ -90,19 +90,19 @@ jobs:
     
     - name: stage
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: copy  x64\Release\PipeplinesExe.exe .
+      run: copy  x64\Debug\Attend10
       
     - name: addEmail
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: git config --global user.email "olekaspt@mail.uc.edu"
+      run: git config --global user.email "nazia.tabassum@northsouth.edu"
       
     - name: addName
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: git config --global user.name "Patrick Olelas"
+      run: git config --global user.name "NaziaToma"
       
     - name: add
       working-directory: ${{env.GITHUB_WORKSPACE}}
-      run: git add PipeplinesExe.exe 
+      run: git add -f x64\Debug\PipeplinesExe.exe 
           
     - name: commit
       working-directory: ${{env.GITHUB_WORKSPACE}}
